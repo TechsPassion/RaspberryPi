@@ -55,23 +55,8 @@ http://<RaspberryPi-IP>:8080/?action=stream
 ---
 
 ## **5. Share the Stream Over the Internet**
-### **Option 1: Use Ngrok (Recommended for Security)**
-1. Download and install Ngrok:
-   ```bash
-   wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.tgz
-   tar -xvzf ngrok-stable-linux-arm.tgz
-   ```
-2. Authenticate Ngrok:
-   ```bash
-   ./ngrok authtoken <your-ngrok-auth-token>
-   ```
-3. Start a tunnel to port 8080:
-   ```bash
-   ./ngrok http 8080
-   ```
-Ngrok will provide a public URL (e.g., `https://xyz.ngrok.io`), which you can use to access your webcam stream from anywhere.
 
-### **Option 2: Port Forwarding (Less Secure)**
+### **Port Forwarding (Less Secure)**
 1. Log in to your router and forward port `8080` to your Raspberry Pi’s IP address.
 2. Find your public IP:
    ```bash
@@ -84,9 +69,4 @@ Ngrok will provide a public URL (e.g., `https://xyz.ngrok.io`), which you can us
 
 ---
 
-## **6. Securing Your Stream**
-To prevent unauthorized access:
-- Use `nginx` as a reverse proxy with authentication.
-- Set up a VPN for secure access.
-- If using `ngrok`, enable password protection.
 
