@@ -21,16 +21,13 @@ Description=MJPG-Streamer - USB Camera Stream
 After=network.target
 
 [Service]
-# Replace 'pi' with the user you want to run the service as
-User=pi
+User=techspassion
 
-# !!! CHANGE THIS !!! 
-# Set this to the directory where mjpg_streamer is located
-WorkingDirectory=/home/pi/mjpg-streamer/mjpg-streamer-experimental
+# This is the full path to your streamer directory
+WorkingDirectory=/home/techspassion/mjpg-streamer/mjpg-streamer-experimental
 
-# !!! CHANGE THIS if your path is different !!! 
-# This is the command to start the streamer
-ExecStart=/home/pi/mjpg-streamer/mjpg_streamer -i "./input_uvc.so -d /dev/video0 -r 640x480 -f 30" -o "./output_http.so -w ./www"
+# The command now uses the full path as well
+ExecStart=/home/techspassion/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -i "./input_uvc.so -d /dev/video0 -r 640x480 -f 30" -o "./output_http.so -w ./www"
 
 # Restart the service if it crashes
 Restart=always
