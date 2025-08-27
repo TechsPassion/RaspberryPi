@@ -26,7 +26,7 @@ User=pi
 
 # !!! CHANGE THIS !!! 
 # Set this to the directory where mjpg_streamer is located
-WorkingDirectory=/home/pi/mjpg-streamer
+WorkingDirectory=/home/pi/mjpg-streamer/mjpg-streamer-experimental
 
 # !!! CHANGE THIS if your path is different !!! 
 # This is the command to start the streamer
